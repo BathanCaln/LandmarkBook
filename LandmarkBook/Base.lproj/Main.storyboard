@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0L3-KE-xFF">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LandmarkBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8ba-tr-UEd">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="separatorColor" systemColor="systemOrangeColor"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="sectionIndexTrackingBackgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8ba-tr-UEd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2b3-Ki-8yx"/>
+                            <constraint firstItem="8ba-tr-UEd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LvH-OS-nZ0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ba-tr-UEd" secondAttribute="trailing" id="MOg-nN-JPf"/>
+                            <constraint firstItem="8ba-tr-UEd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YBs-OP-vr6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ba-tr-UEd" secondAttribute="bottom" id="iAb-CU-oiI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ba-tr-UEd" secondAttribute="bottom" id="rgh-qY-yX6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XwP-Do-r8C"/>
+                    <connections>
+                        <outlet property="tableView" destination="8ba-tr-UEd" id="c0E-3R-01e"/>
+                        <segue destination="oga-ag-doY" kind="show" identifier="toDetailsVC" id="Utd-yn-SXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791.60305343511448" y="-27.464788732394368"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="91k-XL-zHC">
+            <objects>
+                <viewController id="oga-ag-doY" customClass="DetailsVC" customModule="LandmarkBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Exo-OH-mYv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Landmark Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43v-zx-qep">
+                                <rect key="frame" x="66" y="103" width="260" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="YLO-b1-6xn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="31"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xcv-0s-5BG">
+                                <rect key="frame" x="26" y="281" width="341" height="303"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BFB-P1-6XN"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="43v-zx-qep" firstAttribute="centerX" secondItem="Exo-OH-mYv" secondAttribute="centerX" id="3tI-lr-LEC"/>
+                            <constraint firstItem="Xcv-0s-5BG" firstAttribute="leading" secondItem="BFB-P1-6XN" secondAttribute="leading" constant="26" id="4p8-cn-vCk"/>
+                            <constraint firstItem="Xcv-0s-5BG" firstAttribute="top" secondItem="43v-zx-qep" secondAttribute="bottom" constant="81" id="69D-4P-dPC"/>
+                            <constraint firstItem="BFB-P1-6XN" firstAttribute="bottom" secondItem="Xcv-0s-5BG" secondAttribute="bottom" constant="234" id="Kpe-Bp-HmH"/>
+                            <constraint firstItem="43v-zx-qep" firstAttribute="centerX" secondItem="Xcv-0s-5BG" secondAttribute="centerX" id="Q6d-Bd-TBT"/>
+                            <constraint firstItem="43v-zx-qep" firstAttribute="top" secondItem="BFB-P1-6XN" secondAttribute="top" id="uus-Qy-MaS"/>
+                            <constraint firstItem="43v-zx-qep" firstAttribute="leading" secondItem="BFB-P1-6XN" secondAttribute="leading" constant="66" id="zjk-NN-0pl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WDc-kD-09C"/>
+                    <connections>
+                        <outlet property="imageView" destination="Xcv-0s-5BG" id="8jT-Yo-5HS"/>
+                        <outlet property="landmarkLabel" destination="43v-zx-qep" id="EzT-dU-859"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePD-lt-QaT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715.2671755725189" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PZO-Br-76d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0L3-KE-xFF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7uP-Ac-Xdl">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VcU-TX-gsT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbd-4z-Qfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.1145038167939" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
